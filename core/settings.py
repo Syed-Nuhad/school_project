@@ -123,16 +123,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
-
-LANGUAGE_CODE = "en-us"
-
-TIME_ZONE = "UTC"
-
-USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -195,3 +185,19 @@ EMAIL_HOST_USER = "syedpcfirm@gmail.com"
 EMAIL_HOST_PASSWORD = "uanv icbn xrum vqww"  # NOT your normal password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+# settings.py
+PAYMENTS = {
+    "SITE_ORIGIN": os.getenv("SITE_ORIGIN", "https://your-domain.com"),
+
+    # bKash PGW (Sandbox creds from bKash portal)
+    "BKASH_BASE":      os.getenv("BKASH_BASE", "https://tokenized.sandbox.bka.sh/v1.2.0-beta"),
+    "BKASH_USERNAME":  os.getenv("BKASH_USERNAME"),
+    "BKASH_PASSWORD":  os.getenv("BKASH_PASSWORD"),
+    "BKASH_APP_KEY":   os.getenv("BKASH_APP_KEY"),
+    "BKASH_APP_SECRET":os.getenv("BKASH_APP_SECRET"),
+
+    # PayPal (REST)
+    "PP_CLIENT": os.getenv("PP_CLIENT"),
+    "PP_SECRET": os.getenv("PP_SECRET"),
+    "PP_BASE":   os.getenv("PP_BASE", "https://api-m.sandbox.paypal.com"),  # live: https://api-m.paypal.com
+}
