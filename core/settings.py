@@ -185,7 +185,6 @@ EMAIL_HOST_USER = "syedpcfirm@gmail.com"
 EMAIL_HOST_PASSWORD = "uanv icbn xrum vqww"  # NOT your normal password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# settings.py
 PAYMENTS = {
     "SITE_ORIGIN": os.getenv("SITE_ORIGIN", "https://your-domain.com"),
 
@@ -205,3 +204,8 @@ PAYMENTS = {
 
 
 
+INSTITUTION_NAME = "ScholarsHome"
+INSTITUTION_PHONE = "+880-1976250250"
+INSTITUTION_EMAIL = "info@scholarshome.edu"
+INSTITUTION_ADDRESS = "123 College Road, Sylhet"
+INSTITUTION_LOGO_URL = "/static/img/logo.png"
