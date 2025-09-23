@@ -143,6 +143,49 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 
+
+
+
+
+
+EMAIL_FILE_PATH = BASE_DIR / "tmp/emails"
+
+
+EMAIL_BACKEND      = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST         = "smtp.gmail.com"
+EMAIL_PORT         = 465
+EMAIL_USE_SSL      = True
+EMAIL_USE_TLS      = False
+EMAIL_HOST_USER    = "nuhad7july02@gmail.com"
+EMAIL_HOST_PASSWORD= "rkypyfyuxuqoskzu"  # 16 chars, no spaces
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+PAYMENTS = {
+    "SITE_ORIGIN": os.getenv("SITE_ORIGIN", "https://your-domain.com"),
+
+    # bKash PGW (Sandbox creds from bKash portal)
+    "BKASH_BASE":      os.getenv("BKASH_BASE", "https://tokenized.sandbox.bka.sh/v1.2.0-beta"),
+    "BKASH_USERNAME":  os.getenv("BKASH_USERNAME"),
+    "BKASH_PASSWORD":  os.getenv("BKASH_PASSWORD"),
+    "BKASH_APP_KEY":   os.getenv("BKASH_APP_KEY"),
+    "BKASH_APP_SECRET":os.getenv("BKASH_APP_SECRET"),
+
+    # PayPal (REST)
+    "PP_CLIENT": os.getenv("PP_CLIENT"),
+    "PP_SECRET": os.getenv("PP_SECRET"),
+    "PP_BASE":   os.getenv("PP_BASE", "https://api-m.sandbox.paypal.com"),  # live: https://api-m.paypal.com
+}
+
+
+
+
+
+
+
+
+
+
+
 AUTH_USER_MODEL = "accounts.User"
 
 LOGIN_URL = "/accounts/login/"
@@ -174,38 +217,28 @@ ROLE_ADMIN = "admin"
 
 
 
-EMAIL_FILE_PATH = BASE_DIR / "tmp/emails"
-
-
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "syedpcfirm@gmail.com"
-EMAIL_HOST_PASSWORD = "uanv icbn xrum vqww"  # NOT your normal password
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-PAYMENTS = {
-    "SITE_ORIGIN": os.getenv("SITE_ORIGIN", "https://your-domain.com"),
-
-    # bKash PGW (Sandbox creds from bKash portal)
-    "BKASH_BASE":      os.getenv("BKASH_BASE", "https://tokenized.sandbox.bka.sh/v1.2.0-beta"),
-    "BKASH_USERNAME":  os.getenv("BKASH_USERNAME"),
-    "BKASH_PASSWORD":  os.getenv("BKASH_PASSWORD"),
-    "BKASH_APP_KEY":   os.getenv("BKASH_APP_KEY"),
-    "BKASH_APP_SECRET":os.getenv("BKASH_APP_SECRET"),
-
-    # PayPal (REST)
-    "PP_CLIENT": os.getenv("PP_CLIENT"),
-    "PP_SECRET": os.getenv("PP_SECRET"),
-    "PP_BASE":   os.getenv("PP_BASE", "https://api-m.sandbox.paypal.com"),  # live: https://api-m.paypal.com
-}
-
-
-
-
 INSTITUTION_NAME = "ScholarsHome"
 INSTITUTION_PHONE = "+880-1976250250"
-INSTITUTION_EMAIL = "info@scholarshome.edu"
+INSTITUTION_EMAIL = "nuhad7july02@gmail.com"
 INSTITUTION_ADDRESS = "123 College Road, Sylhet"
 INSTITUTION_LOGO_URL = "/static/img/logo.png"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
