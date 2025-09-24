@@ -53,12 +53,6 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "ui",
     "accounts",
-    "classes",
-    "notices",
-    "assignments",
-    "results",
-    "notifications",
-    "audit",
     "content",
 ]
 
@@ -85,6 +79,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "ui.context_processors.footer_settings",
             ],
         },
     },
