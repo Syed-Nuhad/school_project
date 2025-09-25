@@ -80,6 +80,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "ui.context_processors.footer_settings",
+                "ui.context_processors.default_class_id",
             ],
         },
     },
