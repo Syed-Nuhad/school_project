@@ -223,7 +223,9 @@ INSTITUTION_LOGO_URL = "/static/img/logo.png"
 
 
 
-
+ATTENDANCE_CLASS_MODEL   = "academics.Classroom"   # e.g. "school.Class", "core.Section", etc.
+ATTENDANCE_STUDENT_MODEL = "students.Student"      # e.g. "academics.Student"
+ATTENDANCE_ROSTER_ATTR   = "students"              # relation from class → students (fallbacks to "student_set")
 
 
 
